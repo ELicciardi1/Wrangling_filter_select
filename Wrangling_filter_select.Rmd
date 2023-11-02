@@ -210,7 +210,7 @@ movies %>%
 
 ```{r}
 movies %>%
-  filter(length > 120 & rating > 8 ) %>%
+  filter(length > 120 & rating > 8 & Comedy == 1) %>%
   drop_na(mpaa)
 ```
 
