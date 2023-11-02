@@ -226,8 +226,8 @@ movies %>%
 
 ```{r}
 movies %>%
+  filter(votes >= 100 & (Comedy == 1 | Animation == 1)) %>%
   select(title, budget, votes) %>%
-  filter(votes >= 100) %>%
   arrange(desc(budget))
 ```
 
