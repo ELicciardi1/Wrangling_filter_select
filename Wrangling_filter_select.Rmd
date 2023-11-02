@@ -234,8 +234,16 @@ movies %>%
 5. Is your favorite movie in the dataset? What other questions could you ask or answer using `filter()`, `select()`, and `arrange()`?
 
 ```{r}
-
+movies %>%
+  filter(str_detect(title, "Star Wars") | str_detect(title, "Lord of the Rings")) %>%
+  select(title,year,rating) %>%
+  arrange(desc(rating))
 ```
+
+No "Star Wars Revenge of the Sith" is not in the data set unfortunately.
+
+We can however ask questions using the "or" function and arrange by rating we can demonstrate that a difference series such as the lord of the rings has overall higher ratings than the star wars movies.
+
 
 
 
